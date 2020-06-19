@@ -226,6 +226,7 @@ def check_single_values(_n1, _n2, check_if_same, _setts):
 	return False
 
 def run_normal_recursion(_node1, _node2, check_if_same, _setts): # here _node1 will be just a ref (static) and _node2 iterated
+	check_single_values(_node1, _node2, check_if_same, _setts)
 	for _n2 in _node2.childDirs.values():
 		check_single_values(_node1, _n2, check_if_same, _setts)
 		run_normal_recursion(_node1, _n2, check_if_same, _setts)
